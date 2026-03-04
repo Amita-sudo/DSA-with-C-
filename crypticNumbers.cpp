@@ -39,10 +39,10 @@ int main() {
 
     for (int i = L; i <= R; i++) {
 
-        if (i % 7 == 0 &&                // divisible by 7
-            i % 5 != 0 &&                // not divisible by 5
-            !isPalindrome(i) &&          // not palindrome
-            !hasRepeatedDigits(i)) {     // no repeated digits
+        if (i % 7 == 0 &&               
+            i % 5 != 0 &&                
+            !isPalindrome(i) &&          
+            !hasRepeatedDigits(i)) {    
 
             cout << i << " ";
             found = true;
