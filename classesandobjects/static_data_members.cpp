@@ -7,15 +7,18 @@ int balance;
 // static int counter;
 
 public:
+static int totalBal;
 static int counter;// to access without object, only thru class
 Customer( string name, int balance)
 {
 this->name = name;
 this->balance = balance;
 counter++;
+totalBal += balance;
 }
 static void print(){
     cout << counter << endl;
+    cout << totalBal << endl;
 
 }
 
@@ -24,6 +27,7 @@ void display(){
 }
 };
 int Customer :: counter = 0;
+int Customer :: totalBal = 0;
 
 int main (){
     Customer a("Amita", 10000);
