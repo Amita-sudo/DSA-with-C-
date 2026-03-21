@@ -35,6 +35,7 @@ public:
                 lower[i]--;
             }
         }
+        // adding vowel to the actial string in sorted manner
      int first = 0, second = 0;
 while(first < s.size() && second < vowel.size()){
             if (s[first] == '#'){
