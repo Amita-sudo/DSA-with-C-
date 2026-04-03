@@ -1,40 +1,30 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-
 class Customer{
-string name;
-int balance;
-// static int counter;
-
+    // int total_customer = 0;
+    static int total_customer ;
+    string name;
+    int acc_num, balance;
 public:
-static int totalBal;
-static int counter;// to access without object, only thru class
-Customer( string name, int balance)
-{
-this->name = name;
-this->balance = balance;
-counter++;
-totalBal += balance;
-}
-static void print(){
-    cout << counter << endl;
-    cout << totalBal << endl;
-
-}
-
-void display(){
-    cout << name << ","<< balance << " and counter is: " << counter << endl;
-}
+    Customer(string name, int acc_num, int balance){
+    this->name = name;   
+    this->acc_num = acc_num;
+    this->balance =  balance;
+    total_customer++;
+        }
+        void dispaly(){
+            cout<< name << " "<< acc_num << " "<< balance << " "<< total_customer<< endl;
+        }
 };
-int Customer :: counter = 0;
-int Customer :: totalBal = 0;
+int Customer :: total_customer  = 0;
+ int main(){
+ Customer A1("AMITA", 1, 12345);
+ Customer A2("mmmAMITA", 2, 133332345);
+  Customer A3("mmmTA", 3,32345);
+ A1.dispaly();
+ A2.dispaly();
+ A3.dispaly();
+ }
 
-int main (){
-    Customer a("Amita", 10000);
-    a.display();
-    Customer b("Bamita", 18900);
-         b.display();
-         Customer ::print();// can acccess only static variable
-    return 0;
-}
+
 
